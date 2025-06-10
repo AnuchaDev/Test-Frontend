@@ -14,6 +14,7 @@ const alienNumeral = (s: string): number => {
       throw new Error(`Invalid character detected: '${s[i]}'`);
     }
   }
+  
   let numberTotal = 0;
 
   for (let i = 0; i < s.length; i++) {
@@ -29,4 +30,8 @@ const alienNumeral = (s: string): number => {
 
   return numberTotal;
 };
-console.log(alienNumeral("AAABB"));
+
+console.log(alienNumeral("AB")); // 4
+console.log(alienNumeral("AAA")); // 3
+console.log(alienNumeral("LBAAA")); // 58
+console.log(alienNumeral("RCRZCAB")); // 1994
